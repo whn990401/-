@@ -1,0 +1,19 @@
+优势：
+	友好的控制面版
+	支持实时监控
+	支持多种限流
+	支持多种降级模式
+	方便扩展开发
+	支持链路的关联
+
+Sentinel分为两部分：
+	核心库（Java 客户端）不依赖任何框架/库,能够运行于所有 Java 运行时环境，同时对 Dubbo / Spring Cloud 等框架也有较好的支持。
+	控制台（Dashboard）基于 Spring Boot 开发，打包后可以直接运行，不需要额外的 Tomcat 等应用容器
+	
+接入阿里云控制台：
+	java -Dahas.namespace=default -Dproject.name=AppName -Dashas.license=b2f3c2a44d7f43468f308744ee1ff0b0 -jar ahas-sentinel-sdk-demo.jar
+
+本地控制台：
+	java -Dserver.port=9000  -jar sentinel-dashboard-1.7.0.jar
+
+
