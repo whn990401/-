@@ -1,0 +1,26 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: demo-01 #指定服务名
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.40.238:8848
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:9000
+    datasource:
+      ds1:
+        nacos:
+          server-addr: 192.168.40.238:8848
+          dataId: demo-01 #服务名
+          groupId: DEFAULT_GROUP
+          data-type: json #数据类型
+          rule-type: flow #规则类型
+feign:
+  sentinel:
+    enabled: true
